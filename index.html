@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kanban Dashboard</title>
+    <link rel="stylesheet" href="kanban.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="kanban.js"></script>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="kanban__title">
+            <h1><i class="material-icons">check</i> Task Board</h1>
+        </div>
+        <div class="dd">
+            <ol class="kanban planned" id="planned" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+                <div class="kanban__title">
+                    <h2>Planned</h2>
+                </div>
+                <li class="dd-item" data-id="1" id="task1" draggable="true" ondragstart="drag(event)">
+                    <h3 class="title dd-handle">GST Filling Flow<i class="material-icons">edit</i></h3>
+                </li>
+                <li class="dd-item" data-id="1" id="task2" draggable="true" ondragstart="drag(event)">
+                    <h3 class="title dd-handle">ITR Flow<i class="material-icons">edit</i></h3>
+                </li>
+                <div class="actions">
+                    <button class="addbutt">Add new <i class="material-icons">control_point</i> </button>
+                </div>
+            </ol>
+            <ol class="kanban started" id="started" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+                <div class="kanban__title">
+                    <h2>Started</h2>
+                </div>
+                <li class="dd-item" data-id="5" id="started1" draggable="true" ondragstart="drag(event)">
+                    <h3 class="title dd-handle">Metrics Dashboard<i class="material-icons">edit</i></h3>
+                </li>
+                <li class="dd-item" data-id="5" id="started2" draggable="true" ondragstart="drag(event)">
+                    <h3 class="title dd-handle">Error Dashboard<i class="material-icons">edit</i></h3>
+                </li>
+                <div class="actions">
+                    <button class="addbutt">Add new <i class="material-icons">control_point</i> </button>
+                </div>
+            </ol>
+            <ol class="kanban  Done" id="done" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+                <div class="kanban__title">
+                    <h2>Done</h2>
+                </div>
+                <li class="dd-item" data-id="1">
+                    <h3 class="title dd-handle">Analytics Dashboard<i class="material-icons">edit</i></h3>
+                </li>
+                <div class="actions">
+                    <button class="addbutt">Add new <i class="material-icons">control_point</i> </button>
+                </div>
+            </ol>
+        </div>
+        <menu class="kanban">
+            <div class="kanban__title">
+                <button><i class="material-icons">account_circle</i></button>
+                <button><i class="material-icons">account_circle</i></button>
+                <button><i class="material-icons">account_circle</i></button>
+                <button><i class="material-icons">account_circle</i></button>
+            </div>
+        </menu>
+    </div>
+</body>
+
+</html>
